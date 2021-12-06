@@ -1,0 +1,60 @@
+#include <iostream>
+#include <cstdlib>
+#include <conio.h>
+#include <ccomplex>
+
+using namespace std;
+double podstawa;
+double wysokosc;
+double bok1, bok2;
+double Pole(double, double);// Prototyp/deklaracja
+double Pole_pr(double, double);
+double Obwod_pr(double, double);
+int main()
+{
+    setlocale(LC_CTYPE, "Polish");
+    double nasze_pole;
+    cout << " podaj wysokość trojkata";
+    cin >> wysokosc;
+    cout << " podaj podstawe trojkata";
+    cin >> podstawa;
+    nasze_pole = Pole(podstawa, wysokosc);
+    cout << "Pole powierzchni trojkata wynosi: " << nasze_pole << endl;
+
+    cout << "podaj pierwszy bok prostokata\n";
+    cin >> bok1;
+
+    cout << "podaj drugi bok prostokata\n";
+    cin >> bok2;
+
+    cout << "Pole prostokata wynosi " << Pole_pr(bok1, bok2) << endl;
+    cout << "Obwod prostokata wynosi " << Obwod_pr(bok1, bok2) << endl;
+
+    system("PAUSE");
+    return 0;
+
+
+}
+double Pole(double podstawa, double wysokosc)
+{
+    double pole_trojkata;
+    pole_trojkata = (0.5 * podstawa * wysokosc);
+    return pole_trojkata;
+}
+double Obwod_pr(double podstawa, double wysokosc)
+{
+    double Obwod;
+    Obwod = (2 * podstawa + 2 * wysokosc);
+
+    return Obwod;
+
+
+
+}
+double Pole_pr(double podstawa, double wysokosc)
+{
+    double Pole;
+    Pole = (podstawa * wysokosc);
+
+    return Pole;
+}
