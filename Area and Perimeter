@@ -1,0 +1,69 @@
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+
+double podstawa, wysokosc, promien, pole, bok ,obwod; //zmienne globalne
+double  pole_p, pole_kola, obwod_kw; //zmienne globalne
+int wybor;
+double Pole(double, double); // Prototyp/deklaracja
+double Pole(double); // Prototyp/deklaracja
+double Obwod(double);
+
+const double pi = 3.14;
+
+void main()
+{
+    cout << " Wyznaczanie pola prostokąt, wybierz - 1";
+    cout << " Wyznaczanie pola koła, wybierz - 2";
+    cout << " Wyznaczanie obwodu kwadratu - 3";
+    cin >> wybor;
+
+    if (wybor == 1)
+    {
+        cout << " podaj wysokosc prostokąt";
+        cin >> wysokosc;
+
+        cout << " podaj podstawe prostokąt";
+        cin >> podstawa;
+
+        pole_p = Pole(podstawa, wysokosc);
+        cout << "Pole powierzchni prostokąt wynosi: " << pole_p << endl;
+    }
+    if (wybor == 2)
+    {
+        cout << " podaj promień";
+        cin >> promien;
+
+        pole_kola = Pole(promien);
+        cout << "Pole powierzchni prostokąt wynosi: " << pole_kola << endl;
+    }
+    if (wybor == 3)
+    {
+        cout << "podaj bok ";
+        cin >> bok;
+        obwod_kw = Obwod(bok);
+        cout << " Obwod kwadratu wynosi: " << obwod_kw << endl;
+    }
+
+    if (wybor != 1 && wybor != 2 && wybor != 3)
+    {
+        cout << " Musisz wpisać wartość 1, 2 lub 3\n";
+    }
+
+
+}
+
+double Pole(double podstawa, double wysokosc)
+{
+    return (podstawa * wysokosc);
+}
+
+double Pole(double promien)
+{
+    return (pi * promien * promien);
+}
+double Obwod(double bok)
+{
+    return (4 * bok);
+}
