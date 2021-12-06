@@ -1,0 +1,37 @@
+#include <cstdlib>
+#include <iostream>
+#include <conio.h>
+using namespace std;
+struct ogrod
+{
+	int wartosc_jablek;
+	char typ_jablek[20];
+};
+struct warzywnik
+{
+	string warzywo;
+	int waga;
+	
+};
+int main()
+{
+	ogrod ogrod1, ogrod2, ogrod3;
+	warzywnik w[4];
+
+	ogrod1 = { 12, "Papierówka" };
+	ogrod2.wartosc_jablek = 13;
+	ogrod3.wartosc_jablek = 14;
+	w[0] = { "ogórek", 1 };
+	w[1] = { "ziemniak", 2 };
+	w[2] = { "marchewka", 3 };
+	w[3] = { "burak", 4 };
+	cout << "wartosc ogrodu 1: " << ogrod1.wartosc_jablek << "\n";
+	cout << "wartosc ogrodu 2: " << ogrod2.wartosc_jablek << "\n";
+	cout << "wartosc ogrodu 3: " << ogrod3.wartosc_jablek << "\n";
+	for (int i = 0; i < 4; i++)
+	{
+		cout << "warzywo" << i + 1 << ": " << w[i].waga << endl;
+	}
+	system("PAUSE");
+	return 0;
+}
